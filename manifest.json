@@ -1,0 +1,23 @@
+{
+  "manifest_version":2,
+  "name":"Etc",
+  "description":"Etc",
+  "version":"1.0",
+  "content_scripts": [{
+      "matches" : ["*://*/"],
+      "js": ["contentscript.js"],
+      "run_at":"document_end"
+  }],
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+  },
+  "permissions":[
+      "tabs", 
+      "*://*/*",
+  ],
+  "browser_action": {
+      "default_title": "Idonethis", 
+      "default_icon":"icon.png"
+  }
+}
